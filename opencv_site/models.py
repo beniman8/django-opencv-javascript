@@ -18,14 +18,15 @@ ACTION_CHOICE = (
 
 
 class Upload(models.Model):
-
+    name = models.CharField(max_length=100)
+    description = models.TextField()
     image = models.ImageField(upload_to="images")
-    action = models.CharField(max_length=50,choices=ACTION_CHOICE)
+    # action = models.CharField(max_length=50,choices=ACTION_CHOICE)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
-        return f"{self.id}"
+        return f"{self.name}"
 
     def save(self, *args, **kwargs) -> None:
 

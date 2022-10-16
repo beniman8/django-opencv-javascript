@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-4wsi93ksurrh5()#rwg)sq72^glq*6d&!vnx69fr!jm8t6(&x_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.12']
+ALLOWED_HOSTS = ['127.0.0.1','192.168.0.12']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "opencv_site",
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = "core.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -131,3 +132,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media/")
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
