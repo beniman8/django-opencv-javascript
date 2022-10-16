@@ -1,2 +1,2 @@
-# django-opencv-javascript
-This is the opencv project but we make more dynamaic on the front end with javascript
+# django-with-open-cv
+This is django with open cv and javascript to make this project more dynamic on the front end
